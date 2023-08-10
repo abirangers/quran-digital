@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Viga&display=swap");
+@font-face {
+  font-family: "LPMQ";
+  src: url("https://kangismet.github.io/fonts/lpmq.eot");
+  src: url("https://kangismet.github.io/fonts/lpmq.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://kangismet.github.io/fonts/lpmq.ttf") format("truetype");
+  font-weight: 400;
+  font-weight: normal;
+  font-display: swap;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+.active {
+  @apply text-primary;
+}
+
+#info fill {
+  fill: white;
+}
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 69, 242);
+  z-index: 999;
+  transform-origin: left;
+  /* clip-path: polygon(50% 0, 0 100%, 100% 100%); */
+}
+
+.slide-in::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 69, 242);
+  z-index: 999;
+  transform-origin: right;
+}
+
+.slide-out::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+
+/* Kode CSS transisi */
+.opendesk-enter {
+  opacity: 0;
+  /* transform: scale(0.8); */
+}
+
+.opendesk-enter-active {
+  opacity: 1;
+  /*transform: scale(1);
+  */
+  transition: opacity 300ms ease-in;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  -ms-transition: opacity 300ms ease-in;
+  -o-transition: opacity 300ms ease-in;
+}
+
+.opendesk-exit {
+  opacity: 1;
+}
+
+.opendesk-exit-active {
+  opacity: 0;
+  /* transform: scale(0.8); */
+  transition: opacity 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out;
+  -o-transition: opacity 300ms ease-out;
+}
