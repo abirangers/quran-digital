@@ -9,16 +9,19 @@ import { motion } from "framer-motion";
 import { RoughNotation } from "react-rough-notation";
 import { useEffect, useState } from "react";
 const Home = () => {
-  const [circle, setCircle] = useState(true);
+  const [circle, setCircle] = useState(false);
 
   useEffect(() => {
+    const windowWidth = window.innerWidth;
     const handleResize = () => {
-      if (window.innerWidth <= 1320) {
-        setCircle(false);
-      } else {
+      if (windowWidth > 1320) {
         setCircle(true);
+      } else if (windowWidth < 1320) {
+        setCircle(false);
       }
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -68,7 +71,6 @@ const Home = () => {
                 </div>
               </Button>
             </motion.div>
-            {/* </motion.div> */}
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               transition={{ duration: 1.2 }}

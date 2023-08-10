@@ -8,7 +8,7 @@ const Quotes = () => {
         <h1 className="text-[32px] font-medium text-center">
           Al-Qur{"'"}an Digital Berbasis Website
         </h1>
-        <div className="flex flex-col items-center justify-center pt-[52px] lg:flex-row gap-y-4 lg:gap-y-0">
+        <div className="flex flex-col items-center justify-center pt-[52px] lg:flex-row gap-y-4 lg:gap-y-0 overflow-x-hidden">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             transition={{ duration: 1.2 }}
