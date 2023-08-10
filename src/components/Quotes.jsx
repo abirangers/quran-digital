@@ -3,7 +3,7 @@ import ustadz from "../assets/ustadz.png";
 import { motion } from "framer-motion";
 const Quotes = () => {
   return (
-    <section className="lg:pt-[52px]">
+    <section className="lg:pt-[52px] overflow-x-hidden">
       <div className="container mx-auto font-['viga']">
         <h1 className="text-[32px] font-medium text-center">
           Al-Qur{"'"}an Digital Berbasis Website

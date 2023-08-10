@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import transition from "../transition";
 import { RoughNotation } from "react-rough-notation";
 const About = () => {
-  const [hightlight, setHightlight] = useState(true);
+  const [hightlight, setHightlight] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,6 +14,8 @@ const About = () => {
         setHightlight(true);
       }
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
