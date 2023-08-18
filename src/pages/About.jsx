@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import transition from "../transition";
 import { RoughNotation } from "react-rough-notation";
 const About = () => {
   const [hightlight, setHightlight] = useState(false);
@@ -51,8 +50,7 @@ const About = () => {
                 color="#F31559"
                 strokeWidth={4}
                 iterations={1}
-                animationDelay={1300}
-                animationDuration={1600}
+                animationDuration={2000}
               >
                 <a
                   href="#"
@@ -79,4 +77,4 @@ const About = () => {
   );
 };
 
-export default transition(About);
+export default About;

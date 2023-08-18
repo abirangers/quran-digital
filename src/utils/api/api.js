@@ -32,4 +32,3 @@ export const getTafsir = async (id) => {
     console.log("Error fetching list surah ", error);
   }
 };
-

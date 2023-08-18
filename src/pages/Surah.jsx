@@ -9,7 +9,6 @@ import { CSSTransition } from "react-transition-group";
 import DeskSurah from "../components/DeskSurah";
 import TafsSurah from "../components/TafsSurah";
 import { getSurah, getTafsir } from "../utils/api/api";
-import transition from "../transition";
 const Surah = () => {
   const [surahSelanjutnya, setSurahSelanjutnya] = useState(0);
   const [toggleDesk, setToggleDesk] = useState(false);
@@ -43,7 +42,6 @@ const Surah = () => {
       setSurahHead(data);
       console.log(data);
       setSurahSelanjutnya(data.surat_selanjutnya.id);
-      // console.log(surahSelanjutnya);
     };
     surah();
   }, []);
@@ -178,4 +176,4 @@ const Surah = () => {
   );
 };
 
-export default transition(Surah);
+export default Surah;

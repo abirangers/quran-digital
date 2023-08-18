@@ -3,7 +3,6 @@ import alQuran from "../assets/alquranull-karim.svg";
 import ListSurah from "../components/ListSurah";
 import Footer from "../components/Footer";
 import { getListSurah } from "../utils/api/api";
-import transition from "../transition";
 const Quran = () => {
   const [listSurah, setListSurah] = useState([]);
   const [input, setInput] = useState("");
@@ -55,4 +54,4 @@ const Quran = () => {
   );
 };
 
-export default transition(Quran);
+export default Quran;

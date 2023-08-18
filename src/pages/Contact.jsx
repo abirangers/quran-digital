@@ -1,5 +1,4 @@
-import { forwardRef, useEffect, useRef } from "react";
-import transition from "../transition";
+import { useEffect, useRef } from "react";
 import whatsapp from "../assets/whatsapp.png";
 import instagram from "../assets/instagram.webp";
 import tiktok from "../assets/tiktok.svg";
@@ -142,4 +141,4 @@ const FormPesan = ({ inputRef }) => {
   );
 };
 
-export default transition(Contact);
+export default Contact;
